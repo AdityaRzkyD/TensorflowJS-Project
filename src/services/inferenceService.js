@@ -17,7 +17,7 @@ async function predictClassification(model, image) {
         let suggestion;
 
         if(label === 'Cancer'){
-            suggestion = "Segera periksa ke dokter";
+            suggestion = "Segera periksa ke dokter!";
         }
 
         if(label === 'Non-cancer'){
@@ -26,7 +26,7 @@ async function predictClassification(model, image) {
 
         return { label, suggestion};
     }catch(error){
-        throw new InputError(`Terjadi kesalahan dalam melakukan prediksi: ${error.message}`)
+        throw new InputError(`Terjadi kesalahan dalam melakukan prediksi`)
     }
 }
 
